@@ -38,11 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
-VIRTUAL_ENV="C:\Users\afper\OneDrive\Escritorio\Privado\Projects\TradingManagement\TradingManagement\DjangoProject\venv"
-=======
 VIRTUAL_ENV="X:\Ledgetize\TradingManagement\DjangoProject\venv"
->>>>>>> c5429b6313342deba8369462a3fbff70ebafb93f
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

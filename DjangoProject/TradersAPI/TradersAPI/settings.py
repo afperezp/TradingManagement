@@ -1,6 +1,8 @@
 
 from pathlib import Path
+
 ALLOWED_HOSTS = []
+
 from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,7 +36,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'django_filters',
     #Local APPs
-    "usersmanagement"
+    "usersmanagement",
+    "assetsmanagement"
 ]
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [

@@ -64,7 +64,6 @@ class UpdateProfileView(generics.UpdateAPIView):
 
 class LogoutView(APIView):
     permission_classes = (IsAuthenticated,)
-
     def post(self, request):
         try:
             refresh_token = request.data["refresh_token"]
@@ -85,6 +84,7 @@ def get_all_users(request):
     users = User.objects.all()
     user_serializer = UserSerializer(users, many = True)
     return Response(user_serializer.data)
+
 
 
 @api_view(["POST", "GET"])
@@ -139,12 +139,13 @@ def delete_user(request, pk):
             return Response("Se ha creado correctamente el user.")
         return Response(user_serializer.errors)
 
-
+"""
 
 #TODO
 """
-Traders Management
 """
+Traders Management
+
 @api_view(["GET"])
 @permission_classes([AllowAny])
 def get_all_traders(request):
@@ -179,8 +180,9 @@ def create_trader(request, pk):
 
 #TODO
 """
-Clients Management
+
 """
+Clients Management
 @api_view(["GET"])
 @permission_classes([AllowAny])
 def get_all_clients(request):
@@ -204,3 +206,7 @@ def create_client(request, pk):
         user = User.objects.filter(id = pk).first()
         user_serializer = ClientSerializer(user)
         return Response(user_serializer.data)
+        
+
+
+        """

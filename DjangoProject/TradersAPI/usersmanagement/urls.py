@@ -17,18 +17,5 @@ urlpatterns = [
     path('register/', RegisterView.as_view(), name='auth_register'),
     path('change-password/<int:pk>/', ChangePasswordView.as_view(), name='auth_change_password'),
     path('update-profile/<int:pk>/', UpdateProfileView.as_view(), name='auth_update_profile'),
-    path('logout/', LogoutView.as_view(), name='auth_logout'),
-
-
-    # ENDPOITNS FOR TRADERS    
-    path('users/', get_all_users, name ="get_all_users"),
-    path('users/<int:pk>/', get_user, name ="get_user"),
-    path('users/<int:pk>/add-user', create_user, name ="create_user"),
-
-    
-    # ENDPOITNS FOR CLIENTS
-    path('users/', get_all_users, name ="get_all_users"),
-    path('users/<int:pk>/', get_user, name ="get_user"),
-    path('users/<int:pk>/add-user', create_user, name ="create_user"),
-
+    path('logout/', LogoutView.as_view(), name='auth_logout')
 ]
